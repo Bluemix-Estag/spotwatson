@@ -1,1 +1,934 @@
-{"name":"WatsonSpotify","created":"2017-03-28T16:59:46.730Z","intents":[{"intent":"capabilities","created":"2017-03-28T16:59:46.730Z","updated":"2017-04-12T17:33:18.814Z","examples":[{"text":"ajuda","created":"2017-04-03T12:40:55.482Z","updated":"2017-04-03T12:40:55.482Z"},{"text":"Como voce pode me ajudar","created":"2017-04-03T12:41:00.501Z","updated":"2017-04-03T12:41:00.501Z"},{"text":"funcao","created":"2017-04-03T12:41:20.444Z","updated":"2017-04-03T12:41:20.444Z"},{"text":"função","created":"2017-04-03T12:41:14.119Z","updated":"2017-04-03T12:41:14.119Z"},{"text":"funcoes","created":"2017-04-03T12:41:17.986Z","updated":"2017-04-03T12:41:17.986Z"},{"text":"Help","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"Help me","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"How can you help","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"me ajude","created":"2017-04-03T12:41:26.807Z","updated":"2017-04-03T12:41:26.807Z"},{"text":"não sei oq dizer","created":"2017-04-12T17:33:18.814Z","updated":"2017-04-12T17:33:18.814Z"},{"text":"nao sei oq falar","created":"2017-04-12T17:33:14.076Z","updated":"2017-04-12T17:33:14.076Z"},{"text":"oque voce faz?","created":"2017-04-04T13:34:27.333Z","updated":"2017-04-04T13:34:27.333Z"},{"text":"O que voce faz","created":"2017-04-03T12:41:03.567Z","updated":"2017-04-03T12:41:03.567Z"},{"text":"Suas funções","created":"2017-04-03T12:41:09.569Z","updated":"2017-04-03T12:41:09.569Z"},{"text":"Tell me what you can do","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"What can I say","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"What can you do","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"What do you know","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"What things can you do","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"}],"description":null},{"intent":"fim","created":"2017-04-18T14:51:19.503Z","updated":"2017-04-18T14:51:50.081Z","examples":[{"text":"adeus","created":"2017-04-18T14:51:36.682Z","updated":"2017-04-18T14:51:36.682Z"},{"text":"final","created":"2017-04-18T14:51:43.657Z","updated":"2017-04-18T14:51:43.657Z"},{"text":"final de conversa","created":"2017-04-18T14:51:28.515Z","updated":"2017-04-18T14:51:28.515Z"},{"text":"nao quero mais conversar","created":"2017-04-18T14:51:50.081Z","updated":"2017-04-18T14:51:50.081Z"},{"text":"termino","created":"2017-04-18T14:51:33.812Z","updated":"2017-04-18T14:51:33.812Z"}],"description":null},{"intent":"greeting","created":"2017-03-28T16:59:46.730Z","updated":"2017-04-17T20:18:00.410Z","examples":[{"text":"Boa Noite","created":"2017-03-29T13:33:21.807Z","updated":"2017-03-29T13:33:21.807Z"},{"text":"Boa Tarde","created":"2017-03-29T13:33:16.258Z","updated":"2017-03-29T13:33:16.258Z"},{"text":"Bom Dia","created":"2017-03-29T13:33:11.921Z","updated":"2017-03-29T13:33:11.921Z"},{"text":"Hello","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"Oi","created":"2017-04-17T20:18:00.410Z","updated":"2017-04-17T20:18:00.410Z"},{"text":"Olá","created":"2017-04-17T20:17:54.097Z","updated":"2017-04-17T20:17:54.097Z"}],"description":null},{"intent":"lembrança","created":"2017-04-17T19:25:06.598Z","updated":"2017-04-18T13:03:57.054Z","examples":[{"text":"a musica tem um relacao com","created":"2017-04-17T19:25:06.598Z","updated":"2017-04-17T19:25:06.598Z"},{"text":"eu lembro de um trecho da musica","created":"2017-04-17T19:25:06.598Z","updated":"2017-04-17T19:25:06.598Z"},{"text":"eu sei um pedaço da letra e quero o nome da musica","created":"2017-04-17T19:25:06.598Z","updated":"2017-04-17T19:25:06.598Z"},{"text":"eu sei um trecho de musica","created":"2017-04-17T19:25:06.598Z","updated":"2017-04-17T19:25:06.598Z"},{"text":"eu tenho um pedaco","created":"2017-04-17T19:25:06.598Z","updated":"2017-04-17T19:25:06.598Z"}],"description":null},{"intent":"mood","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z","examples":[{"text":"como voce esta","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"Como voce está?","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"como voce ta","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"Tudo bem?","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"tudo em cima?","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"tudo ótimo?","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"vai bem?","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"},{"text":"voce está bem?","created":"2017-04-03T12:44:24.593Z","updated":"2017-04-03T12:44:24.593Z"}],"description":null},{"intent":"music","created":"2017-03-28T17:42:29.194Z","updated":"2017-04-18T14:00:19.067Z","examples":[{"text":"aquela banda","created":"2017-04-18T12:54:48.907Z","updated":"2017-04-18T12:54:48.907Z"},{"text":"aquela musica","created":"2017-04-18T12:54:51.784Z","updated":"2017-04-18T12:54:51.784Z"},{"text":"can you turn on the music","created":"2017-03-30T14:58:55.853Z","updated":"2017-03-30T14:58:55.853Z"},{"text":"coletanea","created":"2017-04-07T15:05:40.399Z","updated":"2017-04-07T15:05:40.399Z"},{"text":"coletânea","created":"2017-04-07T14:53:22.461Z","updated":"2017-04-07T14:53:22.461Z"},{"text":"music","created":"2017-04-18T12:54:01.633Z","updated":"2017-04-18T12:54:01.633Z"},{"text":"musica","created":"2017-04-18T13:03:56.632Z","updated":"2017-04-18T13:03:56.632Z"},{"text":"música","created":"2017-04-18T12:54:09.234Z","updated":"2017-04-18T12:54:09.234Z"},{"text":"musicas","created":"2017-04-18T12:54:40.753Z","updated":"2017-04-18T12:54:40.753Z"},{"text":"músicas","created":"2017-04-18T12:54:34.811Z","updated":"2017-04-18T12:54:34.811Z"},{"text":"Play some music","created":"2017-03-30T14:58:42.235Z","updated":"2017-03-30T14:58:42.235Z"},{"text":"play song","created":"2017-03-30T14:58:59.328Z","updated":"2017-03-30T14:58:59.328Z"}],"description":null},{"intent":"no","created":"2017-04-11T19:08:42.693Z","updated":"2017-04-17T20:09:54.983Z","examples":[{"text":"n","created":"2017-04-12T16:56:41.701Z","updated":"2017-04-12T16:56:41.701Z"},{"text":"nao","created":"2017-04-12T16:56:27.047Z","updated":"2017-04-12T16:56:27.047Z"},{"text":"não","created":"2017-04-12T16:56:36.077Z","updated":"2017-04-12T16:56:36.077Z"},{"text":"nao, seu burro","created":"2017-04-17T20:09:54.983Z","updated":"2017-04-17T20:09:54.983Z"},{"text":"no","created":"2017-04-12T16:56:38.751Z","updated":"2017-04-12T16:56:38.751Z"}],"description":null},{"intent":"off_topic","created":"2017-03-28T16:59:46.730Z","updated":"2017-04-13T14:36:53.805Z","examples":[{"text":"agua","created":"2017-04-13T14:36:17.229Z","updated":"2017-04-13T14:36:17.229Z"},{"text":"aho","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"badasd","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"casdasda","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"daeara","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"eafafead","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"faearada","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"faz cafe","created":"2017-04-13T14:36:25.239Z","updated":"2017-04-13T14:36:25.239Z"},{"text":"fora dilma","created":"2017-04-13T14:36:36.734Z","updated":"2017-04-13T14:36:36.734Z"},{"text":"fora temer","created":"2017-04-13T14:36:21.110Z","updated":"2017-04-13T14:36:21.110Z"},{"text":"gaeradawr","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"golpista safado","created":"2017-04-13T14:36:41.227Z","updated":"2017-04-13T14:36:41.227Z"},{"text":"headaed","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"iadaeda","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"jadeade","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"kaddaea","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"lafafe","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"mafeaf","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"},{"text":"moro","created":"2017-03-28T16:59:46.730Z","updated":"2017-04-13T14:36:53.805Z"},{"text":"moro viado","created":"2017-04-13T14:36:44.470Z","updated":"2017-04-13T14:36:44.470Z"},{"text":"nfeafda","created":"2017-03-28T16:59:46.730Z","updated":"2017-03-28T16:59:46.730Z"}],"description":null},{"intent":"pedido","created":"2017-04-18T13:59:44.468Z","updated":"2017-04-18T14:01:20.846Z","examples":[{"text":"bota pra tocar","created":"2017-04-18T14:01:20.846Z","updated":"2017-04-18T14:01:20.846Z"},{"text":"coloca pra tocar","created":"2017-04-18T14:01:11.701Z","updated":"2017-04-18T14:01:11.701Z"},{"text":"gostaria de saber da musica","created":"2017-04-18T14:00:56.681Z","updated":"2017-04-18T14:00:56.681Z"},{"text":"gostaria de saber da música","created":"2017-04-18T14:00:51.837Z","updated":"2017-04-18T14:00:51.837Z"},{"text":"gostaria de saber do album","created":"2017-04-18T14:00:38.327Z","updated":"2017-04-18T14:00:38.327Z"},{"text":"gostaria de saber do artista","created":"2017-04-18T14:00:33.214Z","updated":"2017-04-18T14:00:33.214Z"},{"text":"põe pra tocar","created":"2017-04-18T14:01:17.067Z","updated":"2017-04-18T14:01:17.067Z"},{"text":"toque pra mim","created":"2017-04-18T14:01:03.651Z","updated":"2017-04-18T14:01:03.651Z"}],"description":null},{"intent":"Thanks","created":"2017-04-06T15:05:33.882Z","updated":"2017-04-17T20:10:08.039Z","examples":[{"text":"Agradeço muito","created":"2017-04-17T20:10:08.039Z","updated":"2017-04-17T20:10:08.039Z"},{"text":"Obrigada","created":"2017-04-06T15:05:33.882Z","updated":"2017-04-06T15:05:33.882Z"},{"text":"Obrigado","created":"2017-04-06T15:05:33.882Z","updated":"2017-04-06T15:05:33.882Z"},{"text":"Thanks","created":"2017-04-06T15:05:33.882Z","updated":"2017-04-06T15:05:33.882Z"},{"text":"Thank you","created":"2017-04-06T15:05:33.882Z","updated":"2017-04-06T15:05:33.882Z"}],"description":null},{"intent":"yes","created":"2017-04-11T19:08:31.965Z","updated":"2017-04-17T20:09:43.456Z","examples":[{"text":"s","created":"2017-04-12T16:56:54.644Z","updated":"2017-04-12T16:56:54.644Z"},{"text":"sim","created":"2017-04-12T16:56:52.301Z","updated":"2017-04-12T16:56:52.301Z"},{"text":"sim, agradeço","created":"2017-04-17T20:09:43.456Z","updated":"2017-04-17T20:09:43.456Z"},{"text":"sim, obrigado","created":"2017-04-17T20:09:33.325Z","updated":"2017-04-17T20:09:33.325Z"},{"text":"yes","created":"2017-04-12T16:56:59.353Z","updated":"2017-04-12T16:56:59.353Z"}],"description":null}],"updated":"2017-04-19T13:08:01.507Z","entities":[{"entity":"ajuda","values":[{"value":"ajuda","created":"2017-04-17T20:03:55.521Z","updated":"2017-04-17T20:03:55.521Z","metadata":null,"synonyms":["ajuda","ajude","estou perdido","help","socorro"]},{"value":"funções","created":"2017-04-17T20:05:56.019Z","updated":"2017-04-17T20:05:56.019Z","metadata":null,"synonyms":["capacidade","capaz","faz","fazer","funcionalidade"]}],"created":"2017-04-17T20:03:55.521Z","updated":"2017-04-17T20:05:56.019Z","metadata":null,"description":null},{"entity":"artist","values":[],"created":"2017-03-30T15:00:19.051Z","updated":"2017-03-30T15:00:19.051Z","metadata":null,"description":null},{"entity":"genres","values":[{"value":"classical","created":"2017-04-07T14:29:36.840Z","updated":"2017-04-07T14:29:36.840Z","metadata":null,"synonyms":[]},{"value":"forró","created":"2017-04-17T16:22:51.513Z","updated":"2017-04-17T16:22:51.513Z","metadata":null,"synonyms":[]},{"value":"indie","created":"2017-04-06T15:00:48.870Z","updated":"2017-04-06T15:00:48.870Z","metadata":null,"synonyms":[]},{"value":"jazz","created":"2017-04-07T14:29:44.169Z","updated":"2017-04-07T14:29:44.169Z","metadata":null,"synonyms":[]},{"value":"pagode","created":"2017-04-17T16:22:47.401Z","updated":"2017-04-17T16:22:47.401Z","metadata":null,"synonyms":[]},{"value":"pop","created":"2017-04-06T15:00:48.870Z","updated":"2017-04-06T15:00:48.870Z","metadata":null,"synonyms":[]},{"value":"rock","created":"2017-04-06T15:00:48.870Z","updated":"2017-04-06T15:00:48.870Z","metadata":null,"synonyms":[]}],"created":"2017-04-06T15:00:48.870Z","updated":"2017-04-17T16:22:51.513Z","metadata":null,"description":null},{"entity":"saudaçoes","values":[{"value":"educadas","created":"2017-04-17T20:25:32.467Z","updated":"2017-04-17T20:25:32.467Z","metadata":null,"synonyms":["boa noite","boa tarde","bom dia","oi","ola","olá"]}],"created":"2017-04-17T20:25:32.467Z","updated":"2017-04-17T20:25:32.467Z","metadata":null,"description":null},{"entity":"tipo","values":[{"value":"album","created":"2017-04-07T17:54:38.711Z","updated":"2017-04-07T17:55:01.840Z","metadata":null,"synonyms":["coletanea","coletânea"]},{"value":"artist","created":"2017-03-30T15:01:13.393Z","updated":"2017-04-07T17:55:08.866Z","metadata":null,"synonyms":["artist","artista","artistas"]},{"value":"music","created":"2017-03-30T15:01:08.429Z","updated":"2017-04-07T17:54:55.974Z","metadata":null,"synonyms":["música","musicas","músicas"]}],"created":"2017-03-28T17:47:45.142Z","updated":"2017-04-07T17:55:08.866Z","metadata":null,"description":null},{"entity":"YorN","values":[{"value":"nao","created":"2017-04-17T19:47:48.516Z","updated":"2017-04-17T19:47:48.516Z","metadata":null,"synonyms":["n","nao","never","no","nunca"]},{"value":"sim","created":"2017-04-17T19:47:48.516Z","updated":"2017-04-17T19:47:48.516Z","metadata":null,"synonyms":["exatamente","s","sim","sim sim","yes"]}],"created":"2017-04-17T19:47:48.516Z","updated":"2017-04-17T19:47:48.516Z","metadata":null,"description":null}],"language":"en","metadata":null,"description":"","dialog_nodes":[{"go_to":null,"output":{},"parent":null,"context":null,"created":"2017-03-28T16:59:46.730Z","updated":"2017-04-17T19:50:23.754Z","metadata":null,"conditions":"anything_else","description":null,"dialog_node":"Qualquer coisa","previous_sibling":"Fim"},{"go_to":null,"output":{},"parent":null,"context":null,"created":"2017-03-30T16:56:38.775Z","updated":"2017-04-18T14:03:58.719Z","metadata":null,"conditions":"#music || #lembrança || #pedido","description":null,"dialog_node":"Busca","previous_sibling":"Humor"},{"go_to":null,"output":{},"parent":"Busca","context":null,"created":"2017-03-30T17:09:06.040Z","updated":"2017-04-17T20:36:47.699Z","metadata":null,"conditions":"intents.size()","description":null,"dialog_node":"procurar musica","previous_sibling":"node_1_1492462006349"},{"go_to":null,"output":{},"parent":"Qualquer coisa","context":null,"created":"2017-04-17T19:27:33.485Z","updated":"2017-04-18T13:28:03.321Z","metadata":null,"conditions":"@YorN:sim","description":null,"dialog_node":"Indentificou busca","previous_sibling":"node_1_1492458140699"},{"go_to":null,"output":{"text":{"values":["Olá! Estou aqui para te ajudar a encontrar músicas, albuns ou artistas no Spotify! O que você deseja?","Oi! Tenho a capacidade de encontrar músicas, álbuns e artistas no Spotify! Você quer encontrar alguma coisa?"]}},"parent":null,"context":{"default_counter":0},"created":"2017-03-28T16:59:46.730Z","updated":"2017-04-18T17:39:23.722Z","metadata":null,"conditions":"conversation_start || #greeting || @saudaçoes","description":null,"dialog_node":"Início","previous_sibling":null},{"go_to":null,"output":{"text":{"values":["De nada! Estarei aqui se precisar de algo a mais."],"selection_policy":"sequential"}},"parent":null,"context":null,"created":"2017-04-06T15:05:38.638Z","updated":"2017-04-17T19:14:41.766Z","metadata":null,"conditions":"#Thanks","description":null,"dialog_node":"Agradecimento","previous_sibling":"Features"},{"go_to":null,"output":{"text":{"values":["Espero que tenha encontrado o que desejava, se quiser buscar mais alguma coisa tente novamente."],"selection_policy":"sequential"}},"parent":null,"context":{},"created":"2017-04-18T14:21:43.758Z","updated":"2017-04-18T15:00:23.871Z","metadata":null,"conditions":"#fim","description":null,"dialog_node":"Fim","previous_sibling":"Agradecimento"},{"go_to":null,"output":{"text":{"values":["Fico feliz de ter encontrado! Caso precise de mim, estarei aqui."],"selection_policy":"sequential"}},"parent":"TrueorFalse","context":{"action":"yes"},"created":"2017-04-11T19:08:23.164Z","updated":"2017-04-17T20:15:43.606Z","metadata":null,"conditions":"#yes && @YorN:sim","description":null,"dialog_node":"Positivo","previous_sibling":null},{"go_to":null,"output":{"text":{"values":["Hmm... Então eu não compreendi o que você quis dizer, desculpe. Digite ajuda para saber minhas funções."],"selection_policy":"sequential"}},"parent":"Qualquer coisa","context":null,"created":"2017-04-17T19:52:09.351Z","updated":"2017-04-17T19:56:59.471Z","metadata":null,"conditions":"@YorN:nao","description":null,"dialog_node":"Ajuda","previous_sibling":"Indentificou busca"},{"go_to":null,"output":{"text":{"values":["Voce deseja procurar por artista, album, musica, letra ou todos eles?"],"selection_policy":"sequential"}},"parent":"TrueorFalse","context":{"action":"no"},"created":"2017-04-11T19:08:38.590Z","updated":"2017-04-19T13:08:01.507Z","metadata":null,"conditions":"#no && @YorN:nao","description":null,"dialog_node":"Negativo","previous_sibling":"Positivo"},{"go_to":null,"output":{"text":{"values":["Eu estou bem. Fico feliz por ter perguntado ! O quê posso fazer por você?","Estou ótimo, como posso ajudá-lo?"],"selection_policy":"random"}},"parent":null,"context":null,"created":"2017-04-03T12:44:33.558Z","updated":"2017-04-17T19:13:14.415Z","metadata":null,"conditions":"#mood","description":null,"dialog_node":"Humor","previous_sibling":"Início"},{"go_to":null,"output":{"text":{"values":["Posso encontrar uma música, um álbum ou um artista que voce queira. Para isso, digite a busca desejada.","Posso encontrar uma música, um álbum ou um artista que voce queira. Qual a sua busca?"],"selection_policy":"random"}},"parent":null,"context":null,"created":"2017-03-28T16:59:46.730Z","updated":"2017-04-18T15:21:40.442Z","metadata":null,"conditions":"#capabilities && @ajuda","description":null,"dialog_node":"Features","previous_sibling":"Busca"},{"go_to":null,"output":{"text":{"values":["Esse é o resultado que voce queria?","Era isso que você estava procurando?","Esse é o resultado que você estava procurando?"],"selection_policy":"sequential"}},"parent":"procurar musica","context":{"action":"question"},"created":"2017-04-11T19:07:43.681Z","updated":"2017-04-17T19:59:54.538Z","metadata":null,"conditions":"intents.size()","description":null,"dialog_node":"TrueorFalse","previous_sibling":null},{"go_to":{"return":null,"selector":"body","dialog_node":"Fim"},"output":{},"parent":"Negativo","context":{},"created":"2017-04-18T14:36:54.262Z","updated":"2017-04-18T14:45:00.693Z","metadata":null,"conditions":"intents.size()","description":null,"dialog_node":"node_6_1492526210926","previous_sibling":null},{"go_to":{"return":null,"selector":"condition","dialog_node":"procurar musica"},"output":{},"parent":"Indentificou busca","context":null,"created":"2017-04-18T13:27:15.201Z","updated":"2017-04-18T13:29:34.252Z","metadata":null,"conditions":"intents.size()","description":null,"dialog_node":"node_2_1492522031840","previous_sibling":null},{"type":"response_condition","go_to":null,"output":{},"parent":"procurar musica","context":{"action":"music"},"created":"2017-03-30T17:20:45.807Z","updated":"2017-04-18T14:22:43.845Z","metadata":null,"conditions":null,"description":null,"dialog_node":"node_11_1490894443769","previous_sibling":"TrueorFalse"},{"type":"response_condition","go_to":null,"output":{"text":{"values":["Certo, então me repete o nome ou a referência do que você quer encontrar, por favor."],"selection_policy":"sequential"}},"parent":"Indentificou busca","context":null,"created":"2017-04-17T20:30:24.867Z","updated":"2017-04-17T20:30:30.439Z","metadata":null,"conditions":" @YorN:sim","description":null,"dialog_node":"node_1_1492461024467","previous_sibling":"node_2_1492522031840"},{"type":"response_condition","go_to":null,"output":{"text":{"values":["Certo, entendi que você quer procurar alguma coisa, mas não exatamente o que. Me diga agora apenas o nome ou a referência daquilo que deseja procurar."],"selection_policy":"sequential"}},"parent":"Busca","context":null,"created":"2017-04-18T13:59:11.640Z","updated":"2017-04-18T14:05:44.623Z","metadata":null,"conditions":"#pedido","description":null,"dialog_node":"node_3_1492523948293","previous_sibling":null},{"type":"response_condition","go_to":null,"output":{"text":{"values":["Certo, e qual o nome ou referencia pela qual eu devo procurar?"],"selection_policy":"random"}},"parent":"Busca","context":null,"created":"2017-04-17T20:46:46.725Z","updated":"2017-04-18T14:02:55.051Z","metadata":null,"conditions":" anything_else","description":null,"dialog_node":"node_1_1492462006349","previous_sibling":"node_3_1492523948293"},{"type":"response_condition","go_to":null,"output":{"text":{"values":["Não entendi, isso é algo que eu devo procurar? Tente digitar ajuda para visualizar minhas funções.","Não entendi. Você quer me dizer para procurar isso?"],"selection_policy":"random"}},"parent":"Qualquer coisa","context":null,"created":"2017-04-17T19:42:21.117Z","updated":"2017-04-17T19:48:45.534Z","metadata":null,"conditions":"","description":null,"dialog_node":"node_1_1492458140699","previous_sibling":null}],"workspace_id":"184b629d-2c0b-48c0-84fe-b5d5b716dce0","counterexamples":[]}
+{
+    "name": "WatsonSpotify",
+    "created": "2017-03-28T16:59:46.730Z",
+    "intents": [{
+        "intent": "capabilities",
+        "created": "2017-03-28T16:59:46.730Z",
+        "updated": "2017-04-12T17:33:18.814Z",
+        "examples": [{
+            "text": "ajuda",
+            "created": "2017-04-03T12:40:55.482Z",
+            "updated": "2017-04-03T12:40:55.482Z"
+        }, {
+            "text": "Como voce pode me ajudar",
+            "created": "2017-04-03T12:41:00.501Z",
+            "updated": "2017-04-03T12:41:00.501Z"
+        }, {
+            "text": "funcao",
+            "created": "2017-04-03T12:41:20.444Z",
+            "updated": "2017-04-03T12:41:20.444Z"
+        }, {
+            "text": "função",
+            "created": "2017-04-03T12:41:14.119Z",
+            "updated": "2017-04-03T12:41:14.119Z"
+        }, {
+            "text": "funcoes",
+            "created": "2017-04-03T12:41:17.986Z",
+            "updated": "2017-04-03T12:41:17.986Z"
+        }, {
+            "text": "Help",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "Help me",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "How can you help",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "me ajude",
+            "created": "2017-04-03T12:41:26.807Z",
+            "updated": "2017-04-03T12:41:26.807Z"
+        }, {
+            "text": "não sei oq dizer",
+            "created": "2017-04-12T17:33:18.814Z",
+            "updated": "2017-04-12T17:33:18.814Z"
+        }, {
+            "text": "nao sei oq falar",
+            "created": "2017-04-12T17:33:14.076Z",
+            "updated": "2017-04-12T17:33:14.076Z"
+        }, {
+            "text": "oque voce faz?",
+            "created": "2017-04-04T13:34:27.333Z",
+            "updated": "2017-04-04T13:34:27.333Z"
+        }, {
+            "text": "O que voce faz",
+            "created": "2017-04-03T12:41:03.567Z",
+            "updated": "2017-04-03T12:41:03.567Z"
+        }, {
+            "text": "Suas funções",
+            "created": "2017-04-03T12:41:09.569Z",
+            "updated": "2017-04-03T12:41:09.569Z"
+        }, {
+            "text": "Tell me what you can do",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "What can I say",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "What can you do",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "What do you know",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "What things can you do",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }],
+        "description": null
+    }, {
+        "intent": "fim",
+        "created": "2017-04-18T14:51:19.503Z",
+        "updated": "2017-04-18T14:51:50.081Z",
+        "examples": [{
+            "text": "adeus",
+            "created": "2017-04-18T14:51:36.682Z",
+            "updated": "2017-04-18T14:51:36.682Z"
+        }, {
+            "text": "final",
+            "created": "2017-04-18T14:51:43.657Z",
+            "updated": "2017-04-18T14:51:43.657Z"
+        }, {
+            "text": "final de conversa",
+            "created": "2017-04-18T14:51:28.515Z",
+            "updated": "2017-04-18T14:51:28.515Z"
+        }, {
+            "text": "nao quero mais conversar",
+            "created": "2017-04-18T14:51:50.081Z",
+            "updated": "2017-04-18T14:51:50.081Z"
+        }, {
+            "text": "termino",
+            "created": "2017-04-18T14:51:33.812Z",
+            "updated": "2017-04-18T14:51:33.812Z"
+        }],
+        "description": null
+    }, {
+        "intent": "greeting",
+        "created": "2017-03-28T16:59:46.730Z",
+        "updated": "2017-04-17T20:18:00.410Z",
+        "examples": [{
+            "text": "Boa Noite",
+            "created": "2017-03-29T13:33:21.807Z",
+            "updated": "2017-03-29T13:33:21.807Z"
+        }, {
+            "text": "Boa Tarde",
+            "created": "2017-03-29T13:33:16.258Z",
+            "updated": "2017-03-29T13:33:16.258Z"
+        }, {
+            "text": "Bom Dia",
+            "created": "2017-03-29T13:33:11.921Z",
+            "updated": "2017-03-29T13:33:11.921Z"
+        }, {
+            "text": "Hello",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "Oi",
+            "created": "2017-04-17T20:18:00.410Z",
+            "updated": "2017-04-17T20:18:00.410Z"
+        }, {
+            "text": "Olá",
+            "created": "2017-04-17T20:17:54.097Z",
+            "updated": "2017-04-17T20:17:54.097Z"
+        }],
+        "description": null
+    }, {
+        "intent": "lembrança",
+        "created": "2017-04-17T19:25:06.598Z",
+        "updated": "2017-04-18T13:03:57.054Z",
+        "examples": [{
+            "text": "a musica tem um relacao com",
+            "created": "2017-04-17T19:25:06.598Z",
+            "updated": "2017-04-17T19:25:06.598Z"
+        }, {
+            "text": "eu lembro de um trecho da musica",
+            "created": "2017-04-17T19:25:06.598Z",
+            "updated": "2017-04-17T19:25:06.598Z"
+        }, {
+            "text": "eu sei um pedaço da letra e quero o nome da musica",
+            "created": "2017-04-17T19:25:06.598Z",
+            "updated": "2017-04-17T19:25:06.598Z"
+        }, {
+            "text": "eu sei um trecho de musica",
+            "created": "2017-04-17T19:25:06.598Z",
+            "updated": "2017-04-17T19:25:06.598Z"
+        }, {
+            "text": "eu tenho um pedaco",
+            "created": "2017-04-17T19:25:06.598Z",
+            "updated": "2017-04-17T19:25:06.598Z"
+        }],
+        "description": null
+    }, {
+        "intent": "mood",
+        "created": "2017-04-03T12:44:24.593Z",
+        "updated": "2017-04-03T12:44:24.593Z",
+        "examples": [{
+            "text": "como voce esta",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "Como voce está?",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "como voce ta",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "Tudo bem?",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "tudo em cima?",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "tudo ótimo?",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "vai bem?",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }, {
+            "text": "voce está bem?",
+            "created": "2017-04-03T12:44:24.593Z",
+            "updated": "2017-04-03T12:44:24.593Z"
+        }],
+        "description": null
+    }, {
+        "intent": "music",
+        "created": "2017-03-28T17:42:29.194Z",
+        "updated": "2017-04-18T14:00:19.067Z",
+        "examples": [{
+            "text": "aquela banda",
+            "created": "2017-04-18T12:54:48.907Z",
+            "updated": "2017-04-18T12:54:48.907Z"
+        }, {
+            "text": "aquela musica",
+            "created": "2017-04-18T12:54:51.784Z",
+            "updated": "2017-04-18T12:54:51.784Z"
+        }, {
+            "text": "can you turn on the music",
+            "created": "2017-03-30T14:58:55.853Z",
+            "updated": "2017-03-30T14:58:55.853Z"
+        }, {
+            "text": "coletanea",
+            "created": "2017-04-07T15:05:40.399Z",
+            "updated": "2017-04-07T15:05:40.399Z"
+        }, {
+            "text": "coletânea",
+            "created": "2017-04-07T14:53:22.461Z",
+            "updated": "2017-04-07T14:53:22.461Z"
+        }, {
+            "text": "music",
+            "created": "2017-04-18T12:54:01.633Z",
+            "updated": "2017-04-18T12:54:01.633Z"
+        }, {
+            "text": "musica",
+            "created": "2017-04-18T13:03:56.632Z",
+            "updated": "2017-04-18T13:03:56.632Z"
+        }, {
+            "text": "música",
+            "created": "2017-04-18T12:54:09.234Z",
+            "updated": "2017-04-18T12:54:09.234Z"
+        }, {
+            "text": "musicas",
+            "created": "2017-04-18T12:54:40.753Z",
+            "updated": "2017-04-18T12:54:40.753Z"
+        }, {
+            "text": "músicas",
+            "created": "2017-04-18T12:54:34.811Z",
+            "updated": "2017-04-18T12:54:34.811Z"
+        }, {
+            "text": "Play some music",
+            "created": "2017-03-30T14:58:42.235Z",
+            "updated": "2017-03-30T14:58:42.235Z"
+        }, {
+            "text": "play song",
+            "created": "2017-03-30T14:58:59.328Z",
+            "updated": "2017-03-30T14:58:59.328Z"
+        }],
+        "description": null
+    }, {
+        "intent": "no",
+        "created": "2017-04-11T19:08:42.693Z",
+        "updated": "2017-04-17T20:09:54.983Z",
+        "examples": [{
+            "text": "n",
+            "created": "2017-04-12T16:56:41.701Z",
+            "updated": "2017-04-12T16:56:41.701Z"
+        }, {
+            "text": "nao",
+            "created": "2017-04-12T16:56:27.047Z",
+            "updated": "2017-04-12T16:56:27.047Z"
+        }, {
+            "text": "não",
+            "created": "2017-04-12T16:56:36.077Z",
+            "updated": "2017-04-12T16:56:36.077Z"
+        }, {
+            "text": "nao, seu burro",
+            "created": "2017-04-17T20:09:54.983Z",
+            "updated": "2017-04-17T20:09:54.983Z"
+        }, {
+            "text": "no",
+            "created": "2017-04-12T16:56:38.751Z",
+            "updated": "2017-04-12T16:56:38.751Z"
+        }],
+        "description": null
+    }, {
+        "intent": "off_topic",
+        "created": "2017-03-28T16:59:46.730Z",
+        "updated": "2017-04-13T14:36:53.805Z",
+        "examples": [{
+            "text": "agua",
+            "created": "2017-04-13T14:36:17.229Z",
+            "updated": "2017-04-13T14:36:17.229Z"
+        }, {
+            "text": "aho",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "badasd",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "casdasda",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "daeara",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "eafafead",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "faearada",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "faz cafe",
+            "created": "2017-04-13T14:36:25.239Z",
+            "updated": "2017-04-13T14:36:25.239Z"
+        }, {
+            "text": "fora dilma",
+            "created": "2017-04-13T14:36:36.734Z",
+            "updated": "2017-04-13T14:36:36.734Z"
+        }, {
+            "text": "fora temer",
+            "created": "2017-04-13T14:36:21.110Z",
+            "updated": "2017-04-13T14:36:21.110Z"
+        }, {
+            "text": "gaeradawr",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "golpista safado",
+            "created": "2017-04-13T14:36:41.227Z",
+            "updated": "2017-04-13T14:36:41.227Z"
+        }, {
+            "text": "headaed",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "iadaeda",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "jadeade",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "kaddaea",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "lafafe",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "mafeaf",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }, {
+            "text": "moro",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-04-13T14:36:53.805Z"
+        }, {
+            "text": "moro viado",
+            "created": "2017-04-13T14:36:44.470Z",
+            "updated": "2017-04-13T14:36:44.470Z"
+        }, {
+            "text": "nfeafda",
+            "created": "2017-03-28T16:59:46.730Z",
+            "updated": "2017-03-28T16:59:46.730Z"
+        }],
+        "description": null
+    }, {
+        "intent": "pedido",
+        "created": "2017-04-18T13:59:44.468Z",
+        "updated": "2017-04-18T14:01:20.846Z",
+        "examples": [{
+            "text": "bota pra tocar",
+            "created": "2017-04-18T14:01:20.846Z",
+            "updated": "2017-04-18T14:01:20.846Z"
+        }, {
+            "text": "coloca pra tocar",
+            "created": "2017-04-18T14:01:11.701Z",
+            "updated": "2017-04-18T14:01:11.701Z"
+        }, {
+            "text": "gostaria de saber da musica",
+            "created": "2017-04-18T14:00:56.681Z",
+            "updated": "2017-04-18T14:00:56.681Z"
+        }, {
+            "text": "gostaria de saber da música",
+            "created": "2017-04-18T14:00:51.837Z",
+            "updated": "2017-04-18T14:00:51.837Z"
+        }, {
+            "text": "gostaria de saber do album",
+            "created": "2017-04-18T14:00:38.327Z",
+            "updated": "2017-04-18T14:00:38.327Z"
+        }, {
+            "text": "gostaria de saber do artista",
+            "created": "2017-04-18T14:00:33.214Z",
+            "updated": "2017-04-18T14:00:33.214Z"
+        }, {
+            "text": "põe pra tocar",
+            "created": "2017-04-18T14:01:17.067Z",
+            "updated": "2017-04-18T14:01:17.067Z"
+        }, {
+            "text": "toque pra mim",
+            "created": "2017-04-18T14:01:03.651Z",
+            "updated": "2017-04-18T14:01:03.651Z"
+        }],
+        "description": null
+    }, {
+        "intent": "Thanks",
+        "created": "2017-04-06T15:05:33.882Z",
+        "updated": "2017-04-17T20:10:08.039Z",
+        "examples": [{
+            "text": "Agradeço muito",
+            "created": "2017-04-17T20:10:08.039Z",
+            "updated": "2017-04-17T20:10:08.039Z"
+        }, {
+            "text": "Obrigada",
+            "created": "2017-04-06T15:05:33.882Z",
+            "updated": "2017-04-06T15:05:33.882Z"
+        }, {
+            "text": "Obrigado",
+            "created": "2017-04-06T15:05:33.882Z",
+            "updated": "2017-04-06T15:05:33.882Z"
+        }, {
+            "text": "Thanks",
+            "created": "2017-04-06T15:05:33.882Z",
+            "updated": "2017-04-06T15:05:33.882Z"
+        }, {
+            "text": "Thank you",
+            "created": "2017-04-06T15:05:33.882Z",
+            "updated": "2017-04-06T15:05:33.882Z"
+        }],
+        "description": null
+    }, {
+        "intent": "yes",
+        "created": "2017-04-11T19:08:31.965Z",
+        "updated": "2017-04-17T20:09:43.456Z",
+        "examples": [{
+            "text": "s",
+            "created": "2017-04-12T16:56:54.644Z",
+            "updated": "2017-04-12T16:56:54.644Z"
+        }, {
+            "text": "sim",
+            "created": "2017-04-12T16:56:52.301Z",
+            "updated": "2017-04-12T16:56:52.301Z"
+        }, {
+            "text": "sim, agradeço",
+            "created": "2017-04-17T20:09:43.456Z",
+            "updated": "2017-04-17T20:09:43.456Z"
+        }, {
+            "text": "sim, obrigado",
+            "created": "2017-04-17T20:09:33.325Z",
+            "updated": "2017-04-17T20:09:33.325Z"
+        }, {
+            "text": "yes",
+            "created": "2017-04-12T16:56:59.353Z",
+            "updated": "2017-04-12T16:56:59.353Z"
+        }],
+        "description": null
+    }],
+    "updated": "2017-04-19T13:08:01.507Z",
+    "entities": [{
+        "entity": "ajuda",
+        "values": [{
+            "value": "ajuda",
+            "created": "2017-04-17T20:03:55.521Z",
+            "updated": "2017-04-17T20:03:55.521Z",
+            "metadata": null,
+            "synonyms": ["ajuda", "ajude", "estou perdido", "help", "socorro"]
+        }, {
+            "value": "funções",
+            "created": "2017-04-17T20:05:56.019Z",
+            "updated": "2017-04-17T20:05:56.019Z",
+            "metadata": null,
+            "synonyms": ["capacidade", "capaz", "faz", "fazer", "funcionalidade"]
+        }],
+        "created": "2017-04-17T20:03:55.521Z",
+        "updated": "2017-04-17T20:05:56.019Z",
+        "metadata": null,
+        "description": null
+    }, {
+        "entity": "artist",
+        "values": [],
+        "created": "2017-03-30T15:00:19.051Z",
+        "updated": "2017-03-30T15:00:19.051Z",
+        "metadata": null,
+        "description": null
+    }, {
+        "entity": "genres",
+        "values": [{
+            "value": "classical",
+            "created": "2017-04-07T14:29:36.840Z",
+            "updated": "2017-04-07T14:29:36.840Z",
+            "metadata": null,
+            "synonyms": []
+        }, {
+            "value": "forró",
+            "created": "2017-04-17T16:22:51.513Z",
+            "updated": "2017-04-17T16:22:51.513Z",
+            "metadata": null,
+            "synonyms": []
+        }, {
+            "value": "indie",
+            "created": "2017-04-06T15:00:48.870Z",
+            "updated": "2017-04-06T15:00:48.870Z",
+            "metadata": null,
+            "synonyms": []
+        }, {
+            "value": "jazz",
+            "created": "2017-04-07T14:29:44.169Z",
+            "updated": "2017-04-07T14:29:44.169Z",
+            "metadata": null,
+            "synonyms": []
+        }, {
+            "value": "pagode",
+            "created": "2017-04-17T16:22:47.401Z",
+            "updated": "2017-04-17T16:22:47.401Z",
+            "metadata": null,
+            "synonyms": []
+        }, {
+            "value": "pop",
+            "created": "2017-04-06T15:00:48.870Z",
+            "updated": "2017-04-06T15:00:48.870Z",
+            "metadata": null,
+            "synonyms": []
+        }, {
+            "value": "rock",
+            "created": "2017-04-06T15:00:48.870Z",
+            "updated": "2017-04-06T15:00:48.870Z",
+            "metadata": null,
+            "synonyms": []
+        }],
+        "created": "2017-04-06T15:00:48.870Z",
+        "updated": "2017-04-17T16:22:51.513Z",
+        "metadata": null,
+        "description": null
+    }, {
+        "entity": "saudaçoes",
+        "values": [{
+            "value": "educadas",
+            "created": "2017-04-17T20:25:32.467Z",
+            "updated": "2017-04-17T20:25:32.467Z",
+            "metadata": null,
+            "synonyms": ["boa noite", "boa tarde", "bom dia", "oi", "ola", "olá"]
+        }],
+        "created": "2017-04-17T20:25:32.467Z",
+        "updated": "2017-04-17T20:25:32.467Z",
+        "metadata": null,
+        "description": null
+    }, {
+        "entity": "tipo",
+        "values": [{
+            "value": "album",
+            "created": "2017-04-07T17:54:38.711Z",
+            "updated": "2017-04-07T17:55:01.840Z",
+            "metadata": null,
+            "synonyms": ["coletanea", "coletânea"]
+        }, {
+            "value": "artist",
+            "created": "2017-03-30T15:01:13.393Z",
+            "updated": "2017-04-07T17:55:08.866Z",
+            "metadata": null,
+            "synonyms": ["artist", "artista", "artistas"]
+        }, {
+            "value": "music",
+            "created": "2017-03-30T15:01:08.429Z",
+            "updated": "2017-04-07T17:54:55.974Z",
+            "metadata": null,
+            "synonyms": ["música", "musicas", "músicas"]
+        }],
+        "created": "2017-03-28T17:47:45.142Z",
+        "updated": "2017-04-07T17:55:08.866Z",
+        "metadata": null,
+        "description": null
+    }, {
+        "entity": "YorN",
+        "values": [{
+            "value": "nao",
+            "created": "2017-04-17T19:47:48.516Z",
+            "updated": "2017-04-17T19:47:48.516Z",
+            "metadata": null,
+            "synonyms": ["n", "nao", "never", "no", "nunca"]
+        }, {
+            "value": "sim",
+            "created": "2017-04-17T19:47:48.516Z",
+            "updated": "2017-04-17T19:47:48.516Z",
+            "metadata": null,
+            "synonyms": ["exatamente", "s", "sim", "sim sim", "yes"]
+        }],
+        "created": "2017-04-17T19:47:48.516Z",
+        "updated": "2017-04-17T19:47:48.516Z",
+        "metadata": null,
+        "description": null
+    }],
+    "language": "en",
+    "metadata": null,
+    "description": "",
+    "dialog_nodes": [{
+        "go_to": null,
+        "output": {},
+        "parent": null,
+        "context": null,
+        "created": "2017-03-28T16:59:46.730Z",
+        "updated": "2017-04-17T19:50:23.754Z",
+        "metadata": null,
+        "conditions": "anything_else",
+        "description": null,
+        "dialog_node": "Qualquer coisa",
+        "previous_sibling": "Fim"
+    }, {
+        "go_to": null,
+        "output": {},
+        "parent": null,
+        "context": null,
+        "created": "2017-03-30T16:56:38.775Z",
+        "updated": "2017-04-18T14:03:58.719Z",
+        "metadata": null,
+        "conditions": "#music || #lembrança || #pedido",
+        "description": null,
+        "dialog_node": "Busca",
+        "previous_sibling": "Humor"
+    }, {
+        "go_to": null,
+        "output": {},
+        "parent": "Busca",
+        "context": null,
+        "created": "2017-03-30T17:09:06.040Z",
+        "updated": "2017-04-17T20:36:47.699Z",
+        "metadata": null,
+        "conditions": "intents.size()",
+        "description": null,
+        "dialog_node": "procurar musica",
+        "previous_sibling": "node_1_1492462006349"
+    }, {
+        "go_to": null,
+        "output": {},
+        "parent": "Qualquer coisa",
+        "context": null,
+        "created": "2017-04-17T19:27:33.485Z",
+        "updated": "2017-04-18T13:28:03.321Z",
+        "metadata": null,
+        "conditions": "@YorN:sim",
+        "description": null,
+        "dialog_node": "Indentificou busca",
+        "previous_sibling": "node_1_1492458140699"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Olá! Estou aqui para te ajudar a encontrar músicas, albuns ou artistas no Spotify! O que você deseja?", "Oi! Tenho a capacidade de encontrar músicas, álbuns e artistas no Spotify! Você quer encontrar alguma coisa?"]
+            }
+        },
+        "parent": null,
+        "context": {
+            "default_counter": 0
+        },
+        "created": "2017-03-28T16:59:46.730Z",
+        "updated": "2017-04-18T17:39:23.722Z",
+        "metadata": null,
+        "conditions": "conversation_start || #greeting || @saudaçoes",
+        "description": null,
+        "dialog_node": "Início",
+        "previous_sibling": null
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["De nada! Estarei aqui se precisar de algo a mais."],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": null,
+        "context": null,
+        "created": "2017-04-06T15:05:38.638Z",
+        "updated": "2017-04-17T19:14:41.766Z",
+        "metadata": null,
+        "conditions": "#Thanks",
+        "description": null,
+        "dialog_node": "Agradecimento",
+        "previous_sibling": "Features"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Espero que tenha encontrado o que desejava, se quiser buscar mais alguma coisa tente novamente."],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": null,
+        "context": {},
+        "created": "2017-04-18T14:21:43.758Z",
+        "updated": "2017-04-18T15:00:23.871Z",
+        "metadata": null,
+        "conditions": "#fim",
+        "description": null,
+        "dialog_node": "Fim",
+        "previous_sibling": "Agradecimento"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Fico feliz de ter encontrado! Caso precise de mim, estarei aqui."],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "TrueorFalse",
+        "context": {
+            "action": "yes"
+        },
+        "created": "2017-04-11T19:08:23.164Z",
+        "updated": "2017-04-17T20:15:43.606Z",
+        "metadata": null,
+        "conditions": "#yes && @YorN:sim",
+        "description": null,
+        "dialog_node": "Positivo",
+        "previous_sibling": null
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Hmm... Então eu não compreendi o que você quis dizer, desculpe. Digite ajuda para saber minhas funções."],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "Qualquer coisa",
+        "context": null,
+        "created": "2017-04-17T19:52:09.351Z",
+        "updated": "2017-04-17T19:56:59.471Z",
+        "metadata": null,
+        "conditions": "@YorN:nao",
+        "description": null,
+        "dialog_node": "Ajuda",
+        "previous_sibling": "Indentificou busca"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Voce deseja procurar por artista, album, musica, letra ou todos eles?"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "TrueorFalse",
+        "context": {
+            "action": "no"
+        },
+        "created": "2017-04-11T19:08:38.590Z",
+        "updated": "2017-04-19T13:08:01.507Z",
+        "metadata": null,
+        "conditions": "#no && @YorN:nao",
+        "description": null,
+        "dialog_node": "Negativo",
+        "previous_sibling": "Positivo"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Eu estou bem. Fico feliz por ter perguntado ! O quê posso fazer por você?", "Estou ótimo, como posso ajudá-lo?"],
+                "selection_policy": "random"
+            }
+        },
+        "parent": null,
+        "context": null,
+        "created": "2017-04-03T12:44:33.558Z",
+        "updated": "2017-04-17T19:13:14.415Z",
+        "metadata": null,
+        "conditions": "#mood",
+        "description": null,
+        "dialog_node": "Humor",
+        "previous_sibling": "Início"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Posso encontrar uma música, um álbum ou um artista que voce queira. Para isso, digite a busca desejada.", "Posso encontrar uma música, um álbum ou um artista que voce queira. Qual a sua busca?"],
+                "selection_policy": "random"
+            }
+        },
+        "parent": null,
+        "context": null,
+        "created": "2017-03-28T16:59:46.730Z",
+        "updated": "2017-04-18T15:21:40.442Z",
+        "metadata": null,
+        "conditions": "#capabilities && @ajuda",
+        "description": null,
+        "dialog_node": "Features",
+        "previous_sibling": "Busca"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Esse é o resultado que voce queria?", "Era isso que você estava procurando?", "Esse é o resultado que você estava procurando?"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "procurar musica",
+        "context": {
+            "action": "question"
+        },
+        "created": "2017-04-11T19:07:43.681Z",
+        "updated": "2017-04-17T19:59:54.538Z",
+        "metadata": null,
+        "conditions": "intents.size()",
+        "description": null,
+        "dialog_node": "TrueorFalse",
+        "previous_sibling": null
+    }, {
+        "go_to": {
+            "return": null,
+            "selector": "body",
+            "dialog_node": "Fim"
+        },
+        "output": {},
+        "parent": "Negativo",
+        "context": {},
+        "created": "2017-04-18T14:36:54.262Z",
+        "updated": "2017-04-18T14:45:00.693Z",
+        "metadata": null,
+        "conditions": "intents.size()",
+        "description": null,
+        "dialog_node": "node_6_1492526210926",
+        "previous_sibling": null
+    }, {
+        "go_to": {
+            "return": null,
+            "selector": "condition",
+            "dialog_node": "procurar musica"
+        },
+        "output": {},
+        "parent": "Indentificou busca",
+        "context": null,
+        "created": "2017-04-18T13:27:15.201Z",
+        "updated": "2017-04-18T13:29:34.252Z",
+        "metadata": null,
+        "conditions": "intents.size()",
+        "description": null,
+        "dialog_node": "node_2_1492522031840",
+        "previous_sibling": null
+    }, {
+        "type": "response_condition",
+        "go_to": null,
+        "output": {},
+        "parent": "procurar musica",
+        "context": {
+            "action": "music"
+        },
+        "created": "2017-03-30T17:20:45.807Z",
+        "updated": "2017-04-18T14:22:43.845Z",
+        "metadata": null,
+        "conditions": null,
+        "description": null,
+        "dialog_node": "node_11_1490894443769",
+        "previous_sibling": "TrueorFalse"
+    }, {
+        "type": "response_condition",
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Certo, então me repete o nome ou a referência do que você quer encontrar, por favor."],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "Indentificou busca",
+        "context": null,
+        "created": "2017-04-17T20:30:24.867Z",
+        "updated": "2017-04-17T20:30:30.439Z",
+        "metadata": null,
+        "conditions": " @YorN:sim",
+        "description": null,
+        "dialog_node": "node_1_1492461024467",
+        "previous_sibling": "node_2_1492522031840"
+    }, {
+        "type": "response_condition",
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Certo, entendi que você quer procurar alguma coisa, mas não exatamente o que. Me diga agora apenas o nome ou a referência daquilo que deseja procurar."],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "Busca",
+        "context": null,
+        "created": "2017-04-18T13:59:11.640Z",
+        "updated": "2017-04-18T14:05:44.623Z",
+        "metadata": null,
+        "conditions": "#pedido",
+        "description": null,
+        "dialog_node": "node_3_1492523948293",
+        "previous_sibling": null
+    }, {
+        "type": "response_condition",
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Certo, e qual o nome ou referencia pela qual eu devo procurar?"],
+                "selection_policy": "random"
+            }
+        },
+        "parent": "Busca",
+        "context": null,
+        "created": "2017-04-17T20:46:46.725Z",
+        "updated": "2017-04-18T14:02:55.051Z",
+        "metadata": null,
+        "conditions": " anything_else",
+        "description": null,
+        "dialog_node": "node_1_1492462006349",
+        "previous_sibling": "node_3_1492523948293"
+    }, {
+        "type": "response_condition",
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Não entendi, isso é algo que eu devo procurar? Tente digitar ajuda para visualizar minhas funções.", "Não entendi. Você quer me dizer para procurar isso?"],
+                "selection_policy": "random"
+            }
+        },
+        "parent": "Qualquer coisa",
+        "context": null,
+        "created": "2017-04-17T19:42:21.117Z",
+        "updated": "2017-04-17T19:48:45.534Z",
+        "metadata": null,
+        "conditions": "",
+        "description": null,
+        "dialog_node": "node_1_1492458140699",
+        "previous_sibling": null
+    }],
+    "workspace_id": "184b629d-2c0b-48c0-84fe-b5d5b716dce0",
+    "counterexamples": []
+}
