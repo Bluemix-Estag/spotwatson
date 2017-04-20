@@ -1,15 +1,4 @@
-/**
- * This file contains all of the web and hybrid functions for interacting with
- * Ana and the Watson Conversation service. When API calls are not needed, the
- * functions also do basic messaging between the client and the server.
- *
- * @summary   Functions for Ana Chat Bot.
- *
- * @link      cloudco.mybluemix.net
- * @since     0.0.3
- * @requires  app.js
- *
- */
+
 var watson = require('watson-developer-cloud');
 var CONVERSATION_NAME = "WatsonSpotify"; // conversation name goes here.
 var cfenv = require('cfenv');
