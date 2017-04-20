@@ -4,3 +4,5 @@ node_modules
 bEdbxY
 
 .DB_Store
+
+vcap-local.json

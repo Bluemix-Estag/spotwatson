@@ -23,8 +23,7 @@ $(document).ready(function () {
             $('.chat-footer').css({
                 "animation-name": "hide_chat"
             });
-        }
-        else {
+        } else {
             isOpen = true;
             $('.chat-popup').css({
                 "animation-name": "popup_open"
@@ -45,10 +44,10 @@ var params = {},
     context;
 
 function userMessage(message) {
-    
+
     params.text = message;
     if (context) {
-        params.context = context;    
+        params.context = context;
     }
     var xhr = new XMLHttpRequest();
     var uri = '/api/watson';
@@ -60,14 +59,30 @@ function userMessage(message) {
             var response = JSON.parse(xhr.responseText);
             text = response.output.text; // Only display the first response
             context = response.context; // Store the context for next round of questions
-            console.log("Got response from Ana: ", JSON.stringify(response));
-           
+            console.log("Got response from Watson: ", JSON.stringify(response));
+
+
+
+            // Testes comecam aqui.
+            if (response['context']['action'] == 'music') {
+                userMessage('.');
+            
+            }
+
+
+            if (response['context']['result']) {
+                console.log("Aqui: " + JSON.stringify(response['context']['result']))
+                response['context']['result'] = "hey";
+                userMessage('.');
+            }
+
+
+
             for (var txt in text) {
                 displayMessage(text[txt], watson);
             }
 
-        }
-        else {
+        } else {
             console.error('Server error for Conversation. Return status of: ', xhr.statusText);
             displayMessage("Putz, deu um tilt aqui. Você pode tentar novamente.", watson);
         }
@@ -76,7 +91,7 @@ function userMessage(message) {
         console.error('Network error trying to send message!');
         displayMessage("Ops, acho que meu cérebro está offline. Espera um minutinho para continuarmos por favor.", watson);
     };
-    console.log(JSON.stringify(params));
+    //    console.log(JSON.stringify(params));
     xhr.send(JSON.stringify(params));
 }
 
@@ -94,8 +109,7 @@ function newEvent(event) {
             displayMessage(text, 'user');
             userInput.value = '';
             userMessage(text);
-        }
-        else {
+        } else {
             // Blank user message. Do nothing.
             console.error("No message.");
             userInput.value = '';
@@ -110,8 +124,7 @@ function displayMessage(text, user) {
     bubble.setAttribute("class", "bubble");
     if (user == "user") {
         bubble.className += " user";
-    }
-    else {
+    } else {
         bubble.className += " watson";
     }
     bubble.innerHTML = text;

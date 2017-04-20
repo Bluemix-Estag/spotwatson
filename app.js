@@ -1,16 +1,35 @@
+/**
+ * Module dependencies.
+ */
+
 var express = require('express'),
-    cfenv = require('cfenv'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
-    fs = require('fs'),
-    bodyParser = require('body-parser'),
-    methodOverride = require('method-override'),
-    errorHandler = require('errorhandler');
+    fs = require('fs');
+var cfenv = require('cfenv');
+
+var request = require('request');
+var chatbot = require('./config/bot.js');
+
 
 var app = express();
 
+var db;
 
+var cloudant;
+
+var fileToUpload;
+
+var dbCredentials = {
+    dbName: 'my_sample_db'
+};
+
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var errorHandler = require('errorhandler');
+
+// all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -20,16 +39,13 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(methodOverride());
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/style', express.static(path.join(__dirname, '/views/style')));
 
-
-
-app.use(express.static(__dirname + '/public'));
-
-var appEnv = cfenv.getAppEnv();
-
-
+// development only
+if ('development' == app.get('env')) {
+    app.use(errorHandler());
+}
 
 function getDBCredentialsUrl(jsonData) {
     var vcapServices = JSON.parse(jsonData);
@@ -57,7 +73,7 @@ function initDBConnection() {
     // check if DB exists if not create
     cloudant.db.create(dbCredentials.dbName, function(err, res) {
         if (err) {
-            console.log('Could not create new db: ' + dbCredentials.dbName + ', it might already exist.');
+//            console.log('Could not create new db: ' + dbCredentials.dbName + ', it might already exist.');
         }
     });
 
@@ -75,7 +91,7 @@ var vcapLocal = null
 if (require('fs').existsSync('./vcap-local.json')) {
     try {
         vcapLocal = require("./vcap-local.json");
-        console.log("Loaded local VCAP", vcapLocal);
+//        console.log("Loaded local VCAP", vcapLocal);
     }
     catch (e) {
         console.error(e);
@@ -94,11 +110,28 @@ if (appEnv.isLocal) {
 
 
 
-
+app.get('/spot', function(req, res){
+    var options = {
+        url: "https://api.spotify.com/v1/search?q=in+the+end&type=track,artist,album",
+        headers: {
+            Accept: 'text/json'
+        }
+    };
+    
+    function callback(error, response, body){
+        if(!error && response.statusCode == 200){
+            var info = JSON.parse(body);
+//            console.log(info);// Your response is logged here.
+            res.send(JSON.stringify(info));
+        }
+    }
+    request(options, callback);
+    
+});
 
 
 // =====================================
-// WATSON CONVERSATION       =========
+// WATSON CONVERSATION FOR ANA =========
 // =====================================
 app.post('/api/watson', function (req, res) {
     processChatMessage(req, res);
@@ -110,8 +143,26 @@ function processChatMessage(req, res) {
             res.status(err.code || 500).json(err);
         }
         else {
-//           
+//            Logs.find({
+//                selector: {
+//                    'conversation': data.context.conversation_id
+//                }
+//            }, function (err, result) {
+//                if (err) {
+//                    console.log("Cannot find log for conversation id of ", data.context.conversation_id);
+//                }
+//                else if (result.docs.length > 0) {
+//                    var doc = result.docs[0];
+//                    console.log("Sending log updates to dashboard");
+                    //console.log("doc: ", doc);
+//                    io.sockets.emit('logDoc', doc);
+//                }
+//                else {
+//                    console.log("No log file found.");
+//                }
+//            });
             var context = data.context;
+            console.log(JSON.stringify(context));
 //            var owner = req.user.username;
             res.status(200).json(data);
         }
@@ -119,6 +170,10 @@ function processChatMessage(req, res) {
 }
 
 
-app.listen(appEnv.port, '0.0.0.0', function() {
-  console.log("server starting on " + appEnv.url);
+
+
+
+
+http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
+    console.log('Express server listening on port ' + app.get('port'));
 });
