@@ -11,7 +11,7 @@
  *
  */
 var watson = require('watson-developer-cloud');
-var CONVERSATION_NAME = "WatsonSpotify"; // conversation name goes here.
+var CONVERSATION_NAME = "Spotify"; // conversation name goes here.
 var cfenv = require('cfenv');
 var chrono = require('chrono-node');
 var fs = require('fs');
@@ -83,10 +83,10 @@ function initCloudant() {
 // =====================================
 // Create the service wrapper
 function initConversation() {
-    var conversationCredentials = appEnv.getServiceCreds("WatsonSpotify");
+    var conversationCredentials = appEnv.getServiceCreds("Spotify");
     console.log(conversationCredentials);
-    var conversationUsername = process.env.CONVERSATION_USERNAME ;
-    var conversationPassword = process.env.CONVERSATION_PASSWORD;
+    var conversationUsername = process.env.CONVERSATION_USERNAME || 'f25af2a8-164a-48a1-9a23-0dd19a5f4efc';
+    var conversationPassword = process.env.CONVERSATION_PASSWORD || '0Yp2xGsIo855';
     var conversationURL = process.env.CONVERSATION_URL || "https://gateway.watsonplatform.net/conversation/api";
     conversation = watson.conversation({
         url: conversationURL,
@@ -172,9 +172,9 @@ var chatbot = {
 
                         var conv = data.context.conversation_id;
 
-                        console.log("Got response from Watson: ", JSON.stringify(data));
-
-                        if (data['context']['escolha']) {
+                        //                        console.log("Got response from Watson: ", JSON.stringify(data['context']));
+                        if (data['context']['musica'] && data['context']['escolha'] && data['context']['flag']) {
+                            console.log("Entrou em música")
                             var options = {
                                 url: "https://api.spotify.com/v1/search?q=" + data['context']['escolha'] + "&type=track,artist,album",
                                 headers: {
@@ -185,11 +185,17 @@ var chatbot = {
                             function callback1(error, response, body) {
                                 if (!error && response.statusCode == 200) {
                                     var info = JSON.parse(body);
-//                                    console.log(JSON.stringify(info['tracks']['items'][0]['album']['name']));
+                                    if (info != ' ') {
+                                        console.log('info')
+//                                        console.log(JSON.stringify(info['tracks']['items'][0]['artists'][0]['name']));
+                                        data['context']['uri'] = JSON.stringify(info['tracks']['items'][0]['uri']);
+//                                        data['context']['artista'] = "Aqui";
+                                    }
+                                    console.log(JSON.stringify(data['context']));
+                                    callback(null,data);
                                 }
                             }
                             request(options, callback1);
-                            
                         } else {
                             return callback(null, data);
                         }

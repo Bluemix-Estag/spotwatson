@@ -163,6 +163,7 @@ tr:hover .deleteBtn {
 
 .infoImg {
 	cursor: pointer;
+    
 }
 .flexBox {
 	display: flex;
@@ -179,3 +180,5 @@ tr:hover .deleteBtn {
 .appinfo {
 	padding: 10px;
 }
+
+

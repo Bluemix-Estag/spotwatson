@@ -130,6 +130,11 @@ app.get('/spot', function(req, res){
 });
 
 
+app.get('/iframe', function(req, res){
+    res.send('<iframe src="https://embed.spotify.com/?uri=' + "spotify:artist:6IRouO5mvvfcyxtPDKMYFN" + '" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>');
+    // tracks['items'][0]['uri']
+})
+
 // =====================================
 // WATSON CONVERSATION FOR ANA =========
 // =====================================

@@ -1,4 +1,6 @@
 @import url(https://fonts.gogleapis.com/css?family=Source+Sans+Pro:400,600);
+
+
 html,
 body {
     width: 100%;
@@ -21,7 +23,7 @@ body {
 
 .header {
     height: 10%;
-    color: #fff;
+    background-color: rgb(75, 21, 60);
     text-align: center;
 }
 
@@ -52,6 +54,8 @@ body {
     border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: #e6e6e6;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @keyframes popup_open {
@@ -59,7 +63,7 @@ body {
         height: 40px;
     }
     to {
-        height: 75%
+        height: 75%;
     }
 }
 
@@ -97,41 +101,50 @@ body {
     padding-top: 10px;
 }
 
-.chat-popup .chat-body::-webkit-scrollbar{
+
+/* Remove scroll bar in chat box */
+
+.chat-popup .chat-body::-webkit-scrollbar {
     visibility: hidden;
 }
 
 @keyframes show_chat {
     from {
         opacity: 0;
+        z-index: -1;
     }
     to {
         opacity: 1;
+        z-index: 99;
     }
 }
 
 @keyframes hide_chat {
     from {
         opacity: 1;
+        z-index: 99;
     }
     to {
         opacity: 0;
+        z-index: -1;
     }
 }
 
-.chat-popup .chat-body .chat-date{
+.chat-popup .chat-body .chat-date {
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
 }
-.chat-popup .chat-body .chat-date span{
+
+.chat-popup .chat-body .chat-date span {
     font-size: 14px;
     display: inline-block;
     color: #bebebe;
     width: 100%;
 }
 
-.chat-popup .chat-body .chat-date span:before, .chat-popup .chat-body .chat-date span:after{
+.chat-popup .chat-body .chat-date span:before,
+.chat-popup .chat-body .chat-date span:after {
     display: inline-block;
     width: 30%;
     height: 1px;
@@ -139,11 +152,13 @@ body {
     content: '';
     background-color: #c3c3c3;
 }
-.chat-popup .chat-body .chat-date span:before{
+
+.chat-popup .chat-body .chat-date span:before {
     margin-right: 2px;
     left: 0;
 }
-.chat-popup .chat-body .chat-date span:after{
+
+.chat-popup .chat-body .chat-date span:after {
     right: 0;
     margin-left: 2px;
 }
@@ -154,9 +169,7 @@ body {
     margin-bottom: 10px;
     font-size: 14px;
     max-width: 78%;
-    
 }
-
 
 .chat-popup .chat-body .bubble:before {
     width: 8px;
@@ -170,14 +183,14 @@ body {
 
 .chat-popup .chat-body .bubble.watson {
     color: #fff;
-    background-color: #00b0ff;
+    background-color: rgb(75, 21, 60);
     align-self: flex-start;
     margin-left: 20px;
 }
 
 .chat-popup .chat-body .bubble.watson:before {
     left: -18px;
-    background-color: #00b0ff;
+    background-color: rgb(75, 21, 60);
 }
 
 .chat-popup .chat-body .bubble.user:before {
@@ -193,8 +206,10 @@ body {
     margin-right: 20px;
 }
 
-
-.chat-footer{
+.chat-footer {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
     opacity: 0;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -202,14 +217,15 @@ body {
     animation-name: show_chat;
     border: 1px solid #e6e6e6;
     background-color: #eceff1;
-    font-family: 'Source Sans Pro',sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 16px;
     height: 32px;
     display: flex;
     flex-direction: row;
 }
-.chat-footer input{
+
+.chat-footer input {
     color: #1a1a1a;
     border: 0;
     background-color: #eceff1;
@@ -218,7 +234,7 @@ body {
     width: 80%;
 }
 
-.chat-footer .send-btn{
+.chat-footer .send-btn {
     width: 20%;
     content: 'a';
     display: inline-block;

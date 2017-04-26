@@ -44,7 +44,6 @@ var params = {},
     context;
 
 function userMessage(message) {
-
     params.text = message;
     if (context) {
         params.context = context;
@@ -59,28 +58,30 @@ function userMessage(message) {
             var response = JSON.parse(xhr.responseText);
             text = response.output.text; // Only display the first response
             context = response.context; // Store the context for next round of questions
-            console.log("Got response from Watson: ", JSON.stringify(response));
+            //            console.log("Got response from Watson: ", JSON.stringify(response));
 
 
 
             // Testes comecam aqui.
-            if (response['context']['action'] == 'music') {
-                userMessage('.');
-            
-            }
+            //            if (response['context']['musica']){
+            //                displayMessage(text, watson);
+            //            }
 
+            console.log("Context aqui: ");
+            console.log(JSON.stringify(context));
 
-            if (response['context']['result']) {
-                console.log("Aqui: " + JSON.stringify(response['context']['result']))
-                response['context']['result'] = "hey";
-                userMessage('.');
-            }
 
 
 
             for (var txt in text) {
                 displayMessage(text[txt], watson);
             }
+            if (response['context']['uri'] && response['context']['uri'].length > 0 && response['context']['flag']) {
+                delete response['context']['flag'];
+                displaySpotify(response['context']['uri'], watson);
+                userMessage(".");
+            }
+
 
         } else {
             console.error('Server error for Conversation. Return status of: ', xhr.statusText);
@@ -130,6 +131,17 @@ function displayMessage(text, user) {
     bubble.innerHTML = text;
     chat_body.appendChild(bubble);
     chat_body.scrollTop = chat_body.scrollHeight;
+}
+
+function displaySpotify(uri, watson) {
+    uri = uri.replace(new RegExp('\\"', "g"), "");
+    var chat_body = document.getElementById('chat-body');
+    var bubble = document.createElement('div');
+    var main = document.getElementById('main');
+    bubble.innerHTML += '<iframe src="https://embed.spotify.com/?uri=' + uri + '" width="270" height="80" frameborder="0" allowtransparency="true"></iframe>';
+    chat_body.appendChild(bubble);
+    chat_body.scrollTop = chat_body.scrollHeight; // Move chat down to the last message displayed
+    document.getElementById('chatInput').focus();
 }
 
 
