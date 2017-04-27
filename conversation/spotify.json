@@ -1,1 +1,173 @@
-{"name":"Spotify","created":"2017-04-25T14:04:38.666Z","intents":[{"intent":"music","created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","examples":[{"text":"musica","created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z"},{"text":"música","created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z"}],"description":null}],"updated":"2017-04-25T14:24:41.149Z","entities":[{"entity":"response","values":[{"value":"sim","created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","metadata":null,"synonyms":[]}],"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","metadata":null,"description":null}],"language":"pt-br","metadata":null,"description":"","dialog_nodes":[{"go_to":null,"output":{},"parent":"Spotify","context":null,"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:11:14.492Z","metadata":null,"conditions":"input.text","description":null,"dialog_node":"Escolha da música","previous_sibling":null},{"go_to":null,"output":{"text":{"values":["Desculpe, não entendi o que você quer"],"selection_policy":"sequential"}},"parent":null,"context":null,"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","metadata":null,"conditions":"anything_else","description":null,"dialog_node":"node_4_1493127756791","previous_sibling":"Spotify"},{"go_to":null,"output":{"text":{"values":["O artista é : $artista"],"selection_policy":"sequential"}},"parent":"Escolha da música","context":null,"created":"2017-04-25T14:23:52.578Z","updated":"2017-04-25T14:24:23.588Z","metadata":null,"conditions":"input.text == \".\"","description":null,"dialog_node":"node_16_1493130231830","previous_sibling":null},{"go_to":null,"output":{"text":{"values":["Oi , em que posso te ajudar?"],"selection_policy":"sequential"}},"parent":null,"context":null,"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","metadata":null,"conditions":"conversation_start","description":null,"dialog_node":"node_3_1493127748405","previous_sibling":null},{"go_to":null,"output":{"text":{"values":["Qual é a música que você procura?"],"selection_policy":"sequential"}},"parent":null,"context":{"escolha":""},"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:24:41.149Z","metadata":null,"conditions":null,"description":null,"dialog_node":"Spotify","previous_sibling":"node_7_1493127933675"},{"go_to":null,"output":{"text":{"values":["Você quer escolher uma música?"],"selection_policy":"sequential"}},"parent":null,"context":null,"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","metadata":null,"conditions":"#music","description":null,"dialog_node":"node_7_1493127933675","previous_sibling":"node_3_1493127748405"},{"go_to":{"return":null,"selector":"body","dialog_node":"Spotify"},"output":{},"parent":"node_7_1493127933675","context":{"musica":true},"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:04:38.666Z","metadata":null,"conditions":"@response:sim","description":null,"dialog_node":"node_6_1493127846412","previous_sibling":null},{"type":"response_condition","go_to":null,"output":{},"parent":"Escolha da música","context":{"flag":true,"escolha":"<? input.text ?>"},"created":"2017-04-25T14:04:38.666Z","updated":"2017-04-25T14:08:40.964Z","metadata":null,"conditions":"","description":null,"dialog_node":"node_13_1493128086791","previous_sibling":"node_16_1493130231830"}],"workspace_id":"b57dad33-232c-4764-9146-73088614e299","counterexamples":[]}
+{
+    "name": "Spotify",
+    "created": "2017-04-25T14:04:38.666Z",
+    "intents": [{
+        "intent": "music",
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:04:38.666Z",
+        "examples": [{
+            "text": "musica",
+            "created": "2017-04-25T14:04:38.666Z",
+            "updated": "2017-04-25T14:04:38.666Z"
+        }, {
+            "text": "música",
+            "created": "2017-04-25T14:04:38.666Z",
+            "updated": "2017-04-25T14:04:38.666Z"
+        }],
+        "description": null
+    }],
+    "updated": "2017-04-25T14:24:41.149Z",
+    "entities": [{
+        "entity": "response",
+        "values": [{
+            "value": "sim",
+            "created": "2017-04-25T14:04:38.666Z",
+            "updated": "2017-04-25T14:04:38.666Z",
+            "metadata": null,
+            "synonyms": []
+        }],
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:04:38.666Z",
+        "metadata": null,
+        "description": null
+    }],
+    "language": "pt-br",
+    "metadata": null,
+    "description": "",
+    "dialog_nodes": [{
+        "go_to": null,
+        "output": {},
+        "parent": "Spotify",
+        "context": null,
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:11:14.492Z",
+        "metadata": null,
+        "conditions": "input.text",
+        "description": null,
+        "dialog_node": "Escolha da música",
+        "previous_sibling": null
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Desculpe, não entendi o que você quer"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": null,
+        "context": null,
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:04:38.666Z",
+        "metadata": null,
+        "conditions": "anything_else",
+        "description": null,
+        "dialog_node": "node_4_1493127756791",
+        "previous_sibling": "Spotify"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["O artista é : $artista"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": "Escolha da música",
+        "context": null,
+        "created": "2017-04-25T14:23:52.578Z",
+        "updated": "2017-04-25T14:24:23.588Z",
+        "metadata": null,
+        "conditions": "input.text == \".\"",
+        "description": null,
+        "dialog_node": "node_16_1493130231830",
+        "previous_sibling": null
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Oi , em que posso te ajudar?"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": null,
+        "context": null,
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:04:38.666Z",
+        "metadata": null,
+        "conditions": "conversation_start",
+        "description": null,
+        "dialog_node": "node_3_1493127748405",
+        "previous_sibling": null
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Qual é a música que você procura?"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": null,
+        "context": {
+            "escolha": ""
+        },
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:24:41.149Z",
+        "metadata": null,
+        "conditions": null,
+        "description": null,
+        "dialog_node": "Spotify",
+        "previous_sibling": "node_7_1493127933675"
+    }, {
+        "go_to": null,
+        "output": {
+            "text": {
+                "values": ["Você quer escolher uma música?"],
+                "selection_policy": "sequential"
+            }
+        },
+        "parent": null,
+        "context": null,
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:04:38.666Z",
+        "metadata": null,
+        "conditions": "#music",
+        "description": null,
+        "dialog_node": "node_7_1493127933675",
+        "previous_sibling": "node_3_1493127748405"
+    }, {
+        "go_to": {
+            "return": null,
+            "selector": "body",
+            "dialog_node": "Spotify"
+        },
+        "output": {},
+        "parent": "node_7_1493127933675",
+        "context": {
+            "musica": true
+        },
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:04:38.666Z",
+        "metadata": null,
+        "conditions": "@response:sim",
+        "description": null,
+        "dialog_node": "node_6_1493127846412",
+        "previous_sibling": null
+    }, {
+        "type": "response_condition",
+        "go_to": null,
+        "output": {},
+        "parent": "Escolha da música",
+        "context": {
+            "flag": true,
+            "escolha": "<? input.text ?>"
+        },
+        "created": "2017-04-25T14:04:38.666Z",
+        "updated": "2017-04-25T14:08:40.964Z",
+        "metadata": null,
+        "conditions": "",
+        "description": null,
+        "dialog_node": "node_13_1493128086791",
+        "previous_sibling": "node_16_1493130231830"
+    }],
+    "workspace_id": "b57dad33-232c-4764-9146-73088614e299",
+    "counterexamples": []
+}

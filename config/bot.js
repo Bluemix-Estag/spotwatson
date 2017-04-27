@@ -11,7 +11,6 @@
  *
  */
 var watson = require('watson-developer-cloud');
-var CONVERSATION_NAME = "Spotify"; // conversation name goes here.
 var cfenv = require('cfenv');
 var chrono = require('chrono-node');
 var fs = require('fs');
@@ -43,7 +42,7 @@ function initializeAppEnv() {
         require('dotenv').load();
     }
     if (appEnv.services.cloudantNoSQLDB) {
-        //        initCloudant(); No cloudant for the moment
+        initCloudant();
     } else {
         console.error("No Cloudant service exists.");
     }
@@ -61,7 +60,7 @@ var dbname = "logs";
 var Logs;
 
 function initCloudant() {
-    var cloudantURL = appEnv.services.cloudantNoSQLDB[0].credentials.url || appEnv.getServiceCreds("bv-bot-db").url;
+    var cloudantURL = appEnv.services.cloudantNoSQLDB[0].credentials.url || appEnv.getServiceCreds("amil-bot-db").url;
     var Cloudant = require('cloudant')({
         url: cloudantURL,
         plugin: 'retry',
@@ -83,11 +82,11 @@ function initCloudant() {
 // =====================================
 // Create the service wrapper
 function initConversation() {
-    var conversationCredentials = appEnv.getServiceCreds("Spotify");
+    var conversationCredentials = appEnv.getServiceCreds("ecury-conversation");
     console.log(conversationCredentials);
-    var conversationUsername = process.env.CONVERSATION_USERNAME || 'f25af2a8-164a-48a1-9a23-0dd19a5f4efc';
-    var conversationPassword = process.env.CONVERSATION_PASSWORD || '0Yp2xGsIo855';
-    var conversationURL = process.env.CONVERSATION_URL || "https://gateway.watsonplatform.net/conversation/api";
+    var conversationUsername = process.env.CONVERSATION_USERNAME || conversationCredentials.username;
+    var conversationPassword = process.env.CONVERSATION_PASSWORD || conversationCredentials.password;
+    var conversationURL = process.env.CONVERSATION_URL || conversationCredentials.url;
     conversation = watson.conversation({
         url: conversationURL,
         username: conversationUsername,
@@ -99,7 +98,7 @@ function initConversation() {
     conversationWorkspace = process.env.CONVERSATION_WORKSPACE;
     // if not, look it up by name or create one
     if (!conversationWorkspace) {
-        const workspaceName = CONVERSATION_NAME; // Workspace name goes here.
+        const workspaceName = "Spotify";
         console.log('No conversation workspace configured in the environment.');
         console.log(`Looking for a workspace named '${workspaceName}'...`);
         conversation.listWorkspaces((err, result) => {
@@ -111,12 +110,12 @@ function initConversation() {
                     conversationWorkspace = workspace.workspace_id;
                     console.log("Using Watson Conversation with username", conversationUsername, "and workspace", conversationWorkspace);
                 } else {
-                    console.log('Importing workspace from ./conversation/watson.json');
+                    console.log('Importing workspace from ./conversation/bot.json');
                     // create the workspace
-                    const watsonWorkspace = JSON.parse(fs.readFileSync('./conversation/watson.json'));
+                    const bvWorkspace = JSON.parse(fs.readFileSync('./conversation/bot.json'));
                     // force the name to our expected name
-                    watsonWorkspace.name = workspaceName;
-                    conversation.createWorkspace(watsonWorkspace, (createErr, workspace) => {
+                    bvWorkspace.name = workspaceName;
+                    conversation.createWorkspace(bvWorkspace, (createErr, workspace) => {
                         if (createErr) {
                             console.log('Failed to create workspace', err);
                         } else {
@@ -171,8 +170,6 @@ var chatbot = {
                     } else {
 
                         var conv = data.context.conversation_id;
-
-                        //                        console.log("Got response from Watson: ", JSON.stringify(data['context']));
                         if (data['context']['musica'] && data['context']['escolha'] && data['context']['flag']) {
                             console.log("Entrou em música")
                             var options = {
@@ -187,12 +184,12 @@ var chatbot = {
                                     var info = JSON.parse(body);
                                     if (info != ' ') {
                                         console.log('info')
-//                                        console.log(JSON.stringify(info['tracks']['items'][0]['artists'][0]['name']));
+                                        //                                        console.log(JSON.stringify(info['tracks']['items'][0]['artists'][0]['name']));
                                         data['context']['uri'] = JSON.stringify(info['tracks']['items'][0]['uri']);
-//                                        data['context']['artista'] = "Aqui";
+                                        //                                        data['context']['artista'] = "Aqui";
                                     }
                                     console.log(JSON.stringify(data['context']));
-                                    callback(null,data);
+                                    callback(null, data);
                                 }
                             }
                             request(options, callback1);
